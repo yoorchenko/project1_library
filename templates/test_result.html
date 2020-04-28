@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div style="width: 70%; margin: 70px auto 0 auto;">
+	{% for result in results %}
+	<div class="item">
+		<h3><a href="{{ url_for('detail', id=result.id) }}">{{ result.title }}</a></h3>
+		Author: {{ result.author }}<br>
+		Year: {{ result.year }}<br>
+		ISBN: {{ result.isbn }}
+	</div>
+	{% endfor %}
+
+	<style>
+.headnav{
+	top:0;
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+}
+</style>
+</div>
+{% endblock %}

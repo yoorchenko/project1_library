@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="wrapper">
+<div class="container-fluid">
+<div class="row">
+	<div class="col-lg-1 "></div>
+	<div class="form col-lg-5">
+		<form method="post" action="{{ url_for('index') }}">
+			<input  type="radio" name="searchparam" id="option1" value="isbn">
+			<label for="option1">ISBN</label>
+			<input  type="radio" name="searchparam" id="option2" value="title">
+			<label for="option2">Title</label>
+			<input  type="radio" name="searchparam" id="option3" value="author">
+			<label for="option3">Author</label><br>
+			<input type="text" name="query" style="width: 100%; margin: 10px 0 10px 0;">
+			<button type="submit" class="btn btn-primary">Search</button>
+		</form>
+	</div>
+	<div class="welcome col-lg-5">
+		<h2>Welcome To Yoorchenko Library</h2>
+	</div>
+	<div class="col-lg-1"></div>
+</div>
+</div>
+</div>
+{% endblock %}
